@@ -1,0 +1,247 @@
+.Dashboard {
+    flex: 1;
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+    gap: 20px;
+}
+
+.Header {
+    width: 90%;
+    max-width: 500px;
+    box-sizing: border-box;
+    padding: 30px 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+
+.Header h1 {
+    color: var(--primary-color);
+    font-size: 37px;
+}
+
+.Header .Title {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5px;
+}
+
+.Header .description {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5px;
+}
+
+.Header input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    font-size: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+
+.Header input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.Header label {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.Header>button {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.Header>button:hover {
+    background-color: var(--primary-hover);
+}
+
+.Header .filterButtons {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.Header .filterButtons button {
+    background-color: var(--card-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.Header .filterButtons button:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.Header .filterButtons .filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.Header>p {
+    margin: 0;
+    color: var(--danger-color);
+}
+
+.Tasks {
+    display: flex;
+    flex-wrap: wrap;
+    /* If there is no longer enough space, move the excess elements to a new line. */
+    width: 90%;
+    max-width: 900px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.TaskCard {
+    width: 280px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.TaskCard p,
+.TaskCard h3 {
+    margin: 0;
+}
+
+.TaskCard h3 {
+    color: var(--text-color);
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.TaskCard p {
+    color: var(--secondary-text);
+}
+
+.TaskCard .status {
+    padding: 4px 10px;
+    font-weight: 600;
+    border-radius: 20px;
+}
+
+.TaskCard .status.completed {
+    color: var(--success-color);
+    background-color: var(--success-background);
+}
+
+.TaskCard .status.pending {
+    color: var(--pending-color);
+    background-color: var(--pending-background);
+}
+
+.TaskCard .buttons {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.TaskCard .buttons button {
+    border: none;
+    padding: 8px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.TaskCard .buttons .edit {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.TaskCard .buttons .edit:hover {
+    background-color: var(--primary-hover);
+}
+
+.TaskCard .buttons .delete {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.TaskCard .buttons .delete:hover {
+    background-color: var(--danger-hover);
+}
+
+.TaskCard .buttons .toggle.complete {
+    background-color: var(--success-button);
+    color: white;
+}
+
+.TaskCard .buttons .toggle.complete:hover {
+    background-color: var(--success-button-hover);
+}
+
+.TaskCard .buttons .toggle.pending {
+    background-color: var(--pending-button);
+    color: white;
+}
+
+.TaskCard .buttons .toggle.pending:hover {
+    background-color: var(--pending-button-hover);
+}
+
+.TaskCard .description {
+    width: 100%;
+    text-align: start;
+    overflow-wrap: anywhere;
+}
+
+
+@media (max-width: 600px) {
+    .TaskCard {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .Header {
+        padding: 20px;
+    }
+
+    .Header h1 {
+        font-size: 30px;
+    }
+}

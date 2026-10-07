@@ -1,0 +1,38 @@
+:root {
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --background-color: #f8fafc;
+    --card-color: #ffffff;
+    --text-color: #1e293b;
+    --secondary-text: #64748b;
+    --border-color: #e2e8f0;
+    --success-color: #16a34a;
+    --danger-color: #dc2626;
+    --danger-hover: #d60808;
+    --success-color: #15803d;
+    --success-background: #dcfce7;
+    --pending-color: #b45309;
+    --pending-background: #fef3c7;
+    --success-button: #16a34a;
+    --success-button-hover: #15803d;
+    --pending-button: #d97706;
+    --pending-button-hover: #b45309;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+}
+
+html,
+body,
+#root {
+    min-height: 100vh;
+}
+
+
+#root {
+    display: flex;
+    flex-direction: column;
+}

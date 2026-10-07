@@ -1,0 +1,85 @@
+.Register {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.Register form {
+    width: 90%;
+    max-width: 400px;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--card-color);
+    padding: 30px 40px;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+
+.Register .form-group {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.Register input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    font-size: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+
+.Register input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.Register h1 {
+    color: var(--primary-color);
+    font-size: 37px;
+}
+
+.Register label {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.Register button {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.Register button:hover {
+    background-color: var(--primary-hover);
+}
+
+.Register form p {
+    margin: 0;
+    color: var(--danger-color);
+}
+
+@media (max-width: 600px) {
+    .Register {
+        justify-content: flex-start;
+        padding-top: 20px;
+    }
+
+    .Register form {
+        padding: 20px;
+    }
+}

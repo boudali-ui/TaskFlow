@@ -1,0 +1,85 @@
+.login {
+    flex: 1;
+    /*flex: 1 = Take the remaining available space inside the Flex Container.*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login form {
+    width: 90%;
+    max-width: 400px;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--card-color);
+    padding: 30px 40px;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+
+.login .form-group {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.login label {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.login form p {
+    margin: 0;
+    color: var(--danger-color);
+}
+
+.login h1 {
+    color: var(--primary-color);
+    font-size: 32px;
+}
+
+.login input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    font-size: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+
+.login input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.login button {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.login button:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Use index.css to set the rules and overall layout of the application,
+and then use files like Login.css to format the component itself. */
+
+
+@media (max-width: 600px) {
+    .login form {
+        padding: 20px;
+    }
+}
