@@ -8,6 +8,7 @@ const Register = () => {
     const [confirmPass, setConfirmPass] = useState("");
     const [error, setError] = useState("");
     const navigate = useNavigate();
+    const API_URL = import.meta.env.VITE_API_URL;
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -15,7 +16,7 @@ const Register = () => {
             setError("Passwords do not match");
             return;
         }
-        const response = await fetch("http://localhost:5000/users/register", {
+        const response = await fetch(`${API_URL}/users/register`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
